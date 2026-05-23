@@ -53,10 +53,16 @@ Services communicate via **Docker service names** inside a shared network.
 
 ### 🔧 Build and Start All Services
 
-```bash
 docker compose up --build
 
-All services communicate through a shared Docker network: school-net
+🌐 Service Communication Network
+
+All services communicate through a shared Docker network:
+
+school-net
+
+No localhost communication is used between containers.
+Services communicate using Docker service names.
 
 📁 Project Structure
 SchoolPortal/
