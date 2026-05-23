@@ -49,48 +49,12 @@ No `localhost` communication is used between containers.
 Services communicate via **Docker service names** inside a shared network.
 
 ---
-
 ## 🐳 How to Run
 
-### 🔧 Build and start all services
+### 🔧 Build and Start All Services
 
 ```bash
 docker compose up --build
-🌐 Open Applications
-Students Service → http://localhost:5001
-Grades Service → http://localhost:5002
-🧠 Features
-👨‍🎓 Students Service
-Add student
-Edit student
-Delete student
-View student details
-JSON API endpoint
-🧾 Grades Service
-Add grade
-View grades
-Display student name from Students service
-Combine distributed data sources
-🗄️ Database
-SQL Server runs inside Docker container
-Data persists using named volume: sql_data
-EF Core migrations run automatically on startup
-⚙️ Key Concepts Implemented
-Microservices architecture
-Docker containerization
-Docker Compose orchestration
-Service discovery via container names
-HttpClient inter-service communication
-EF Core Code-First migrations
-Dependency Injection in ASP.NET Core
-🛡️ Error Handling
-HttpClient wrapped with try/catch
-Graceful handling when Students service is down
-Prevents application crashes due to service failure
-📦 Docker Compose Services
-sqlserver
-students-mvc
-grades-mvc
 
 All services communicate through a shared Docker network: school-net
 
