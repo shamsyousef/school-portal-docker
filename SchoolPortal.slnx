@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Grades.Mvc/Grades.Mvc.csproj" />
+  <Project Path="Students.Mvc/Students.Mvc.csproj" />
+</Solution>
