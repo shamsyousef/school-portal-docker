@@ -194,16 +194,21 @@ namespace Grades.Mvc.Controllers
 
         // POST: Grades/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken] 
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            Console.WriteLine($"POST DELETE ID = {id}");
+
             var grade = await _context.Grades.FindAsync(id);
-            if (grade != null)
+
+            if (grade == null)
             {
-                _context.Grades.Remove(grade);
+                return NotFound();
             }
 
+            _context.Grades.Remove(grade);
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 

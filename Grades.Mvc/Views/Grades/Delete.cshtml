@@ -134,7 +134,7 @@
             </div>
 
             <!-- Buttons -->
-            <form asp-action="Delete" class="mt-4">
+            <form asp-action="Delete" asp-route-id="@Model.Id" method="post" class="mt-4">
 
                 <input type="hidden" asp-for="Id" />
 
